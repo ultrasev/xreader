@@ -1,3 +1,5 @@
+<img src="public/logo.png" alt="logo" width="200"/>
+
 # Twitter 文本提取 API
 
 一个简单的 API 项目，用于提取 Twitter/X 平台帖子的文本内容，可部署在 Vercel 或者 VPS 上。
