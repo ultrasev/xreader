@@ -1,0 +1,8 @@
+services:
+  app:
+    build: .
+    container_name: xreader
+    ports:
+      - "8000:8000"
+    environment:
+      - PYTHONUNBUFFERED=1
