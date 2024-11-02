@@ -24,6 +24,8 @@ async def get_redis_client() -> Optional[Redis]:
 
 def cached(ttl: int = 60 * 60):
     def decorator(func: Callable) -> Callable:
+        cached_func = aiocache_cached(ttl=ttl)(func)
+
         @wraps(func)
         async def wrapper(*args, **kwargs) -> Any:
             try:
