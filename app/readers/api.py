@@ -4,6 +4,7 @@ from loguru import logger
 
 from .jina import JinaTweetReader
 from .types import AbstractReader
+from .cache import cached
 
 
 class InitReader(AbstractReader):
@@ -60,7 +61,7 @@ class TwitterReader(AbstractReader):
 reader = TwitterReader()
 
 
-@cached(ttl=60 * 60)
+@cached(ttl=86400)
 async def reads(url: str) -> str:
     url = url.replace("/twitter.com/", "/x.com/")  # to avoid 308 redirect
     return await reader.reads(url)
