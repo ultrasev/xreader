@@ -26,14 +26,14 @@
 
 ### API 接口
 
-- **URL**: [`https://xreader.vercel.app/`](https://xreader.vercel.app/)
-- **接口**: `/{twitter_url}`
+- **URL**: [`https://xreader.vercel.app/x`](https://xreader.vercel.app/x)
+- **查询参数**: `url` - Twitter/X 帖子的 URL
 - **请求方式**: GET
 
 ### 示例
 
 ```bash
-curl 'https://xreader.vercel.app/https://x.com/EllenDeGeneres/status/440322224407314432'
+curl 'https://xreader.vercel.app/x?url=https://x.com/EllenDeGeneres/status/440322224407314432'
 ```
 
 ### 返回格式
@@ -51,6 +51,7 @@ curl 'https://xreader.vercel.app/https://x.com/EllenDeGeneres/status/44032222440
 | ------ | ------------ |
 | 200    | 成功         |
 | 400    | URL 格式无效 |
+| 500    | 服务器错误   |
 
 ## Vercel 部署
 

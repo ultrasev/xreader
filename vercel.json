@@ -7,8 +7,18 @@
   ],
   "routes": [
     {
+      "src": "/https://(.*)",
+      "dest": "/$1",
+      "continue": true
+    },
+    {
+      "src": "/http://(.*)",
+      "dest": "/$1",
+      "continue": true
+    },
+    {
       "src": "/(.*)",
-      "dest": "main.py"
+      "dest": "/main.py"
     }
   ]
 }

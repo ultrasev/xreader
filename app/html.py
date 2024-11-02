@@ -88,12 +88,12 @@ HTML_CONTENT = """
     </ul>
     <h2>Usage</h2>
     <div class="endpoint">
-        <p><strong>URL:</strong> <code>https://xreader.vercel.app/</code></p>
-        <p><strong>Endpoint:</strong> <code>/{twitter_url}</code></p>
+        <p><strong>URL:</strong> <code>https://xreader.vercel.app/x</code></p>
+        <p><strong>Query Parameter:</strong> <code>url</code> - Twitter/X post URL</p>
         <p><strong>Method:</strong> GET</p>
     </div>
     <h2>Example</h2>
-    <pre>curl 'https://xreader.vercel.app/https://x.com/EllenDeGeneres/status/440322224407314432'</pre>
+    <pre>curl 'https://xreader.vercel.app/x?url=https://x.com/EllenDeGeneres/status/440322224407314432'</pre>
     <h2>Response Format</h2>
     <pre>{
     "text": "If only Bradley's arm was longer. Best photo ever. #oscars http://t.co/C9U5NOtGap",

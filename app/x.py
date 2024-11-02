@@ -13,7 +13,7 @@ async def root():
     return HTMLResponse(content=HTML_CONTENT, status_code=200)
 
 
-@router.get("/{url:path}")
+@router.get("/x")
 async def x(url: str):
     try:
         twitter_url = TwitterURL(url=url)
