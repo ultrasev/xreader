@@ -62,4 +62,5 @@ reader = TwitterReader()
 
 @cached(ttl=60 * 60)
 async def reads(url: str) -> str:
+    url = url.replace("/twitter.com/", "/x.com/")  # to avoid 308 redirect
     return await reader.reads(url)
